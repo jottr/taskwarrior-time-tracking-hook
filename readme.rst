@@ -1,6 +1,6 @@
 Taskwarrior Time Tracking Hook
 ==============================
-
+ 
 Ensure you have taskwarrior `2.4.x` or higher.
 
 
@@ -10,14 +10,14 @@ Install using pip::
 
 And add it to your Taskwarrior hooks::
 
-    mkdir -p ~/.task/hooks
-    ln -s `which taskwarrior_time_tracking_hook` ~/.task/hooks/on-modify.timetracking
+    $ mkdir -p ~/.task/hooks
+    $ ln -s `which taskwarrior_time_tracking_hook` ~/.task/hooks/on-modify.timetracking
 
 Add the ``totalactivetime`` user defined attribute configuration::
 
-    task config uda.totalactivetime.type duration
-    task config uda.totalactivetime.label Total active time
-    task config uda.totalactivetime.values ''
+    $ task config uda.totalactivetime.type duration
+    $ task config uda.totalactivetime.label Total active time
+    $ task config uda.totalactivetime.values ''
 
 Use ``task <TASK ID> start`` and ``task <TASK ID> stop`` to record when you have
 started and stopped working on tasks.
